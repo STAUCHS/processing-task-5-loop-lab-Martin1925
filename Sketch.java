@@ -162,7 +162,7 @@ public class Sketch extends PApplet {
     int intY = 0;
 
     for (int intRow = 0; intRow < 30; intRow++) {
-      for (int intColumn = 0; intColumn < 30; intColumn++) {
+      for (int intColumn = intRow; intColumn < 30; intColumn++) {
         intX = 3 + intRow*10;  // Instead of zero, calculate the proper intX location using 'intRow'
         intY = 1 + 3 + intColumn*10; // Instead of zero, calculate the proper intY location using 'intColumn'
 
@@ -174,15 +174,51 @@ public class Sketch extends PApplet {
   }
 
   public void draw_section6() {
+    int intX = 0;
+    int intY = 0;
 
+    for (int intRow = 0; intRow < 30; intRow++) {
+      for (int intColumn = intRow; intColumn < 30; intColumn++) {
+        intX = 3 + intRow*10 + 300;  // Instead of zero, calculate the proper intX location using 'intRow'
+        intY = 1 + 3 + intColumn*10; // Instead of zero, calculate the proper intY location using 'intColumn'
+
+        fill(255);
+        noStroke();
+        rect(intX, intY, 5, 5);
+      }
+    }
   }
 
   public void draw_section7() {
+    int intX = 0;
+    int intY = 0;
 
+    for (int intRow = 0; intRow < 30; intRow++) {
+      for (int intColumn = 0; intColumn < intRow; intColumn++) {
+        intX = 3 + intRow*10 + 600;  // Instead of zero, calculate the proper intX location using 'intRow'
+        intY = 1 + 3 + intColumn*10; // Instead of zero, calculate the proper intY location using 'intColumn'
+
+        fill(255);
+        noStroke();
+        rect(intX, intY, 5, 5);
+      }
+    }
   }
   
   public void draw_section8() {
+    int intX = 0;
+    int intY = 0;
 
+    for (int intRow = 0; intRow < 30; intRow++) {
+      for (int intColumn = 0; intColumn < intRow; intColumn++) {
+        intX = 3 + intRow*10 + 900;  // Instead of zero, calculate the proper intX location using 'intRow'
+        intY = 1 + 3 + intColumn*10; // Instead of zero, calculate the proper intY location using 'intColumn'
+
+        fill(255);
+        noStroke();
+        rect(intX, intY, 5, 5);
+      }
+    }
   }
 
 }
